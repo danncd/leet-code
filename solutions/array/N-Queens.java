@@ -16,7 +16,7 @@ class Solution {
         return true;
     }
 
-      // The addStr creates a List to story every row converted to string. When all rows are stored in the List, the List is added to strList.
+      // The addStr function creates a List to store every row converted to string. When all rows are stored in the List, the List is added to strList.
     public void addStr(int[][] board, int size) {
         List<String> strings = new ArrayList<>();
         for (int i = 0; i < size; i++) {
@@ -35,6 +35,7 @@ class Solution {
   
       /* 
       The solve function starts by checking if the col is equal to size which means that a solution has been found.
+      When a solution is found, the function addStr is called to store the board and then, the backtracking looks for other solutions.
       Then, initiate a for loop while checking a position is safe.
       If it's safe, a queen is placed and then the function solve is called again but this time, increasing the col by 1.
       */
